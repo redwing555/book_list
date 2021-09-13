@@ -11,17 +11,24 @@ const addBook = () => {
 };
 
 const display = () => {
-  const title = document.createElement('h4');
-  const author = document.createElement('li');
+  // const title = document.createElement('h4');
+  // const author = document.createElement('li');
+
+  let listElement = document.createElement('li');
+
   const remove = document.createElement('button');
+
   books.forEach((book) => {
+
+    listElement.innerHTML = `&nbsp; ${book.author}&nbsp;&nbsp; ${book.title} &nbsp;&nbsp;`
+    list.appendChild(listElement);
+
     remove.classList.add('remove');
     remove.textContent = 'Remove';
-    list.appendChild(title);
-    list.appendChild(author);
-    list.appendChild(remove);
-    title.textContent = book.title;
-    author.textContent = book.author;
+    listElement.appendChild(remove);
+
+    // title.textContent = book.title;
+    // author.textContent = book.author;
   });
 };
 
