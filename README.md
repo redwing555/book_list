@@ -2,58 +2,79 @@
 
 # Project Name
 
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
+> This Project is an add to list books App created using Javascript.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Awesome Books]()
 
 
-## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+## Built With
+
+- HTML , Javascript.
+- Github, Git actions, vscode studio.
 
 
-To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+# Getting Started
 
-### Setup
+To get a local copy up and running follow these simple example steps:
 
-### Install
+- clone the project by running this command git clone ```https://github.com/redwing555/Portfolio-website.git```
 
-### Usage
+- Open live demo in browser using your favorite text editor and browser!
 
-### Run tests
+- Right-click on the website and go to Inspect .
 
-### Deployment
+- Best fit on 1024p screen or higher or any mobile version with 375p/360p screen
+
+
+
+# Prerequisites
+
+You will be needing:
+
+- A web browser to view output
+
+- A text editor or terminal
+
+
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **HICHAMI Houssam**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- GitHub: [@githubhandle](https://github.com/redwing555)
+- Twitter: [@twitterhandle](https://twitter.com/Houssam07964199)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+👤**CHILONGOSHI Taro**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Tchilo)
+
+
+
+
+# Getting Started
+
+# Getting Started
+
+To get a local copy up and running follow these simple example steps:
+
+- clone the project by running this command git clone `https://github.com/redwing555/book_list.git`
+
+- Open live demo in browser using your favorite text editor!
+
+# Prerequisites
+
+You will be needing:
+
+- A web browser to view output
+
+- A text editor or terminal
 
 ## 🤝 Contributing
 
@@ -65,11 +86,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
