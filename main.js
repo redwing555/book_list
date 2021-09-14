@@ -7,9 +7,12 @@ function addBookToStorage() {
 }
 
 const addBook = () => {
+  let i = 0;
+  i++;
   const book = {
     title: document.querySelector('.title').value,
     author: document.querySelector('.author').value,
+    id: i
   };
 
   books.push(book);
@@ -39,7 +42,7 @@ const display = () => {
 
   books.forEach((book) => {
     const remove = document.createElement('a');
-    remove.innerHTML = '<button  onclick = "removeBook()"> delete </button>';
+    remove.innerHTML = '<button  onclick = "removeBook()" id="${book.id}"> delete </button>';
     const bookInfo = document.createElement('li');
     const authorName = document.createElement('h4');
     bookInfo.innerHTML = `&nbsp; ${book.author} &nbsp;&nbsp; ${book.title} &nbsp;&nbsp;`;
@@ -59,11 +62,15 @@ addButton.addEventListener('click', () => {
   display();
 });
 
-const removeBook = (index) => {
-  books = books.filter((book) => book !== books[index]);
-  const bookRemoved = books.indexOf(index);
-  books.splice(bookRemoved, 1);
+const removeBook = (eventBtn) => {
+  let buttonId = eventBtn.target.id;
+  
+  // books = books.filter((book) => book !== books[index]);
+  // const bookRemoved = books.indexOf(index);
+  // books.splice(bookRemoved, 1);
 
+
+  books = books.filter((book) => book !== books[books.findIndex((x) => x.id === parseInt(buttonId, 10))]); 
   // books.forEach((book,index) => {
   //   if(books.indexOf(book) == index){
   //     books.splice(index,1);
