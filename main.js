@@ -10,7 +10,6 @@ const addBook = () => {
   const book = {
     title: document.querySelector('.title').value,
     author: document.querySelector('.author').value,
-
   };
 
   books.push(book);
@@ -39,14 +38,14 @@ const display = () => {
   getBooksFromStorage();
 
   books.forEach((book) => {
-    const remove = document.createElement('button');
-    remove.innerHTML = 'delete';
+    const remove = document.createElement('a');
+    remove.innerHTML = '<button  onclick = "removeBook()"> delete </button>';
     const bookInfo = document.createElement('li');
     const authorName = document.createElement('h4');
     bookInfo.innerHTML = `&nbsp; ${book.author} &nbsp;&nbsp; ${book.title} &nbsp;&nbsp;`;
 
     bookInfo.classList.add('li');
-    remove.classList.add('remove');
+    // remove.classList.add('remove');
     bookInfo.appendChild(remove);
     list.appendChild(authorName);
     list.appendChild(bookInfo);
@@ -60,29 +59,19 @@ addButton.addEventListener('click', () => {
   display();
 });
 
-// const deleteBook = (index) => {
-//   books = books.filter((book) => book !== books[index]);
+const removeBook = (index) => {
+  books = books.filter((book) => book !== books[index]);
+  const bookRemoved = books.indexOf(index);
+  books.splice(bookRemoved, 1);
 
-//   return books;
-// };
+  // books.forEach((book,index) => {
+  //   if(books.indexOf(book) == index){
+  //     books.splice(index,1);
+  //   }
+  // });
 
-// const removeBtn = document.querySelectorAll('remove');
+  localStorage.setItem('Collection', JSON.stringify(books));
+  window.location.reload();
+};
 
-// removeBtn.forEach( (btn,ind) => {
-
-//   btn.addEventListener('click', () =>{
-
-//     const filteredArr = books.filter((book,index) => index !== ind )
-//     localStorage.setItem('Collection', JSON.stringify(filteredArr));
-//     console.log(localStorage);
-//     window.location.reload();
-
-//   })
-
-// });
-
-// loading page event listener
-
-// window.document.addEventListener('DOMContentLoaded', () => {
-// getBooksFromStorage();
 display();
