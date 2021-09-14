@@ -51,7 +51,7 @@ You will be needing:
 - Twitter: [@twitterhandle](https://twitter.com/Houssam07964199)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-**CHILONGOSHI Taro**
+👤**CHILONGOSHI Taro**
 
 - GitHub: [@githubhandle](https://github.com/Tchilo)
 
