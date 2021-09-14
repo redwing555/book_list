@@ -1,5 +1,6 @@
 let books = [];
 const list = document.querySelector('.list');
+let i = 0;
 
 function addBookToStorage() {
   const booksInformation = JSON.stringify(books);
@@ -7,12 +8,14 @@ function addBookToStorage() {
 }
 
 const addBook = () => {
-  let i = 0;
-  i++;
+  i += 1;
+
   const book = {
+
+    id: i,
     title: document.querySelector('.title').value,
     author: document.querySelector('.author').value,
-    id: i
+
   };
 
   books.push(book);
@@ -42,13 +45,12 @@ const display = () => {
 
   books.forEach((book) => {
     const remove = document.createElement('a');
-    remove.innerHTML = '<button  onclick = "removeBook()" id="${book.id}"> delete </button>';
+    remove.innerHTML = `<button id="${book.id}" class="remove" > delete </button>`;
     const bookInfo = document.createElement('li');
     const authorName = document.createElement('h4');
     bookInfo.innerHTML = `&nbsp; ${book.author} &nbsp;&nbsp; ${book.title} &nbsp;&nbsp;`;
 
     bookInfo.classList.add('li');
-    // remove.classList.add('remove');
     bookInfo.appendChild(remove);
     list.appendChild(authorName);
     list.appendChild(bookInfo);
@@ -62,23 +64,19 @@ addButton.addEventListener('click', () => {
   display();
 });
 
-const removeBook = (eventBtn) => {
-  let buttonId = eventBtn.target.id;
-  
-  // books = books.filter((book) => book !== books[index]);
-  // const bookRemoved = books.indexOf(index);
-  // books.splice(bookRemoved, 1);
-
-
-  books = books.filter((book) => book !== books[books.findIndex((x) => x.id === parseInt(buttonId, 10))]); 
-  // books.forEach((book,index) => {
-  //   if(books.indexOf(book) == index){
-  //     books.splice(index,1);
-  //   }
-  // });
-
+const removeBook = (BtnEvent) => {
+  const btnId = BtnEvent.target.id;
+  /* eslint-disable */
+  books = books.filter((book) => book !== books[books.findIndex((b) => b.id === parseInt(btnId, 10))]);
+  /* eslint-enable */
   localStorage.setItem('Collection', JSON.stringify(books));
   window.location.reload();
 };
+
+list.addEventListener('click', (ev) => {
+  if (ev.target.classList.contains('remove')) {
+    removeBook(ev);
+  }
+});
 
 display();
