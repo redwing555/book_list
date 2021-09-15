@@ -9,7 +9,6 @@ function addBookToStorage() {
 
 const addBook = () => {
   i += 1;
-
   const book = {
 
     id: i,
@@ -80,3 +79,5 @@ list.addEventListener('click', (ev) => {
 });
 
 display();
+
+
