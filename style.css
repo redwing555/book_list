@@ -32,18 +32,30 @@ body {
   font-size: 25px;
   display: flex;
   justify-content: space-between;
-  background-color: #f6f7f8;
   padding: 15px;
   border-radius: 4px;
 }
 
-button {
+.list > li .remove {
   float: right;
   background: #7d53de;
   padding: 10px;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   color: white;
+}
+
+.list > li a {
+  padding: 0.2rem;
+}
+
+a .remove:hover {
+  transition: 200ms;
+  border: 1px solid black;
+  box-shadow: 0.1rem 0.1rem;
+  transform: scale(1.03);
+  font-size: 13px;
 }
 
 .box {
@@ -62,9 +74,23 @@ button {
   text-align: center;
 }
 
-.sub {
+#formm.sub {
   width: 10%;
   margin-right: 320px;
+  cursor: pointer;
+}
+
+#formm div {
+  width: 10%;
+  position: relative;
+  left: 57%;
+}
+
+#formm div .sub:hover {
+  border: 1px solid black;
+  box-shadow: 1px 2px;
+  transform: scale(1.01);
+  transition: 100ms;
 }
 
 .line {
@@ -73,4 +99,11 @@ button {
   background-color: #7d53de;
   border-radius: 8px;
   margin-top: 20px;
+}
+
+input[type=text]:focus {
+  border: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+  outline: none;
+  transition: 100ms;
 }

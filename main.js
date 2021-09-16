@@ -56,8 +56,8 @@ class BookList {
     const bookInfo = document.createElement('li');
     const authorName = document.createElement('h4');
 
-    remove.innerHTML = `<button id="${id}" class="remove" > delete </button>`;
-    bookInfo.innerHTML = `&nbsp; ${author} &nbsp;&nbsp; ${title} &nbsp;&nbsp;`;
+    remove.innerHTML = `<button id="${id}" class="remove" > remove </button>`;
+    bookInfo.innerHTML = `&nbsp; ${author} &nbsp; by &nbsp; ${title} &nbsp;&nbsp;`;
 
     bookInfo.classList.add('li');
 
@@ -79,6 +79,20 @@ class BookList {
     const booksInformation = JSON.stringify(this.books);
     localStorage.setItem('Collection', booksInformation);
   }
+  /* eslint-disable */
+  changeColor() {
+    const lists = Array.from(document.querySelectorAll('.li'));
+
+    lists.forEach((list) => {
+      const i = lists.indexOf(list);
+      if (i % 2 == 0) {
+        list.style.backgroundColor = '#F5F5F5';
+      } else {
+        list.style.backgroundColor = '#E0E0E0';
+      }
+    });
+  }
+  /* eslint-enable */
 }
 
 const bookList = new BookList();
@@ -100,6 +114,7 @@ addButton.addEventListener('click', () => {
   bookList.addBook();
   bookList.display();
   form.reset();
+  bookList.changeColor();
 });
 
 bookList.list.addEventListener('click', (ev) => {
@@ -109,3 +124,4 @@ bookList.list.addEventListener('click', (ev) => {
 });
 
 bookList.display();
+bookList.changeColor();
