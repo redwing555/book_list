@@ -1,3 +1,109 @@
 body {
   margin: 0;
 }
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 20px auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.list {
+  border: 1px solid #7d53de;
+  padding: 20px;
+  margin: 10px;
+}
+
+.list li {
+  list-style: none;
+  width: 90%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.list > li .remove {
+  float: right;
+  background: #7d53de;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.list > li a {
+  padding: 0.2rem;
+}
+
+a .remove:hover {
+  transition: 200ms;
+  border: 1px solid black;
+  box-shadow: 0.1rem 0.1rem;
+  transform: scale(1.03);
+  font-size: 13px;
+}
+
+.box {
+  width: 90%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #444;
+}
+
+.add-book {
+  text-align: center;
+}
+
+#formm.sub {
+  width: 10%;
+  margin-right: 320px;
+  cursor: pointer;
+}
+
+#formm div {
+  width: 10%;
+  position: relative;
+  left: 57%;
+}
+
+#formm div .sub:hover {
+  border: 1px solid black;
+  box-shadow: 1px 2px;
+  transform: scale(1.01);
+  transition: 100ms;
+}
+
+.line {
+  width: 50%;
+  height: 5px;
+  background-color: #7d53de;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+input[type=text]:focus {
+  border: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+  outline: none;
+  transition: 100ms;
+}

@@ -4,26 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Awesome Books</title>
 </head>
 <body>
-  <h1>Awesome Books</h1>
-  <hr>
+  <div class="container">
+  <h1 class="heading">Awesome Books</h1>
   <div class="added2">
     <ul class="list"></ul>
   </div>
-  <hr>
-  <div>
-    <form action="#" name="form" onsubmit="return formValidate()">
-      <input type="text" class="title" name="title" placeholder="Title" required>
-      <input type="text" class="author" name="author" placeholder="Author" required>
-      <input type="button" class="sub" value="Add">
-      
+  <div class="book-inputs">
+    <hr class="line">
+    <h2 class="heading">Add a new book</h2>
+    <form action="#" id="formm" name="form" onsubmit="return formValidate()">
+      <input  type="text" class="title box" name="title" placeholder="Title" required>
+      <input  type="text" class="author box" name="author" placeholder="Author" required>
+      <div><input type="button" class="sub box" value="Add"></div>
     </form>
-    
-
-  
   </div>
+</div>
   <script src="main.js"></script>
 </body>
 </html>
