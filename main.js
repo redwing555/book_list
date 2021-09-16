@@ -126,15 +126,16 @@ bookList.list.addEventListener('click', (ev) => {
 bookList.display();
 bookList.changeColor();
 
-window.addEventListener('load', function time(){
+/* eslint-disable */
+ 
 
-  let {DateTime} =luxon;
-  let now = DateTime.now();
+window.addEventListener('load', () => {
+  const { DateTime } = luxon;
+  const now = DateTime.now();
   document.querySelector('.now').textContent = now.toLocaleString(DateTime.DATETIME_MED);
-  
+});
 
-} );
-
+ /* eslint-enable */
 
 document.getElementById('add-new-book').addEventListener('click', () => {
   document.querySelector('.heading').innerHTML = 'Add a new book';
@@ -144,7 +145,6 @@ document.getElementById('add-new-book').addEventListener('click', () => {
   document.getElementById('add-new-book').style.color = 'red';
   document.getElementById('contact').style.color = 'black';
   document.getElementById('list').style.color = 'black';
-  
 });
 
 document.getElementById('list').addEventListener('click', () => {
@@ -155,7 +155,6 @@ document.getElementById('list').addEventListener('click', () => {
   document.getElementById('list').style.color = 'red';
   document.getElementById('add-new-book').style.color = 'black';
   document.getElementById('contact').style.color = 'black';
-
 });
 
 document.getElementById('contact').addEventListener('click', () => {
@@ -166,5 +165,4 @@ document.getElementById('contact').addEventListener('click', () => {
   document.getElementById('contact').style.color = 'red';
   document.getElementById('list').style.color = 'black';
   document.getElementById('add-new-book').style.color = 'black';
-
 });

@@ -1,5 +1,4 @@
 
-
 body {
   margin: 0;
   padding: 0;
@@ -20,16 +19,19 @@ a:active {
 }
 
 .nav-bar {
-  
   background-color: aliceblue;
   justify-content: space-between;
   border-radius: 5px;
   height: 72px;
   align-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
 }
 
-.nav-bar ul li a{
+.list > li a {
+  padding: 0.2rem;
+}
+
+.nav-bar ul li a {
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -42,8 +44,6 @@ a:active {
   left: -4rem;
   font-size: 1.5rem;
   font-weight: bold;
-  
-  
 }
 
 .d-flex {
@@ -108,10 +108,6 @@ a:active {
   border-radius: 4px;
   cursor: pointer;
   color: white;
-}
-
-.list > li a {
-  padding: 0.2rem;
 }
 
 a .remove:hover {
@@ -183,14 +179,13 @@ input[type=text]:focus {
   display: none;
 }
 
-
-footer{
-  font-family: 'Circular-Loom';
+footer {
+  font-family: 'Circular-Loom', sans-serif;
   font-weight: bold;
   font-size: 1rem;
   position: relative;
   bottom: 0;
-  left: 0rem;
+  left: 0;
   text-align: center;
   padding: 2%;
   top: 30rem;
@@ -198,19 +193,17 @@ footer{
   width: 100%;
 }
 
-.contact-list{
+.contact-list {
   list-style: none;
 }
 
 .contact p {
-
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
-
 }
 
-.contact-list li{
+.contact-list li {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
