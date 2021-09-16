@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Awesome Books]()
+[Awesome Books](https://redwing555.github.io/book_list/)
 
 
 
@@ -21,7 +21,7 @@
 
 To get a local copy up and running follow these simple example steps:
 
-- clone the project by running this command git clone ```https://github.com/redwing555/Portfolio-website.git```
+- clone the project by running this command git clone ```https://github.com/redwing555/book_list.git```
 
 - Open live demo in browser using your favorite text editor and browser!
 
