@@ -101,9 +101,10 @@ let i = 0;
 const store = JSON.parse(localStorage.getItem('Collection'));
 /* eslint-disable */
 if (store !== null) {
-  i = Object.values(store[store.length - 1])[0];
-} else {
   i = 0;
+} else {
+  
+  i = Object.values(store[store.length - 1])[0];
 }
 /* eslint-enable */
 const form = document.getElementById('formm');
@@ -125,3 +126,24 @@ bookList.list.addEventListener('click', (ev) => {
 
 bookList.display();
 bookList.changeColor();
+
+document.getElementById('add-new-book').addEventListener('click', () => {
+  document.querySelector('.heading').innerHTML = 'Add a new book';
+  document.querySelector('.book-inputs').classList.remove('d-none');
+  document.querySelector('.contact').classList.add('d-none');
+  document.querySelector('.book-list').classList.add('d-none');
+});
+
+document.getElementById('list').addEventListener('click', () => {
+  document.querySelector('.heading').innerHTML = 'All Awesome Books';
+  document.querySelector('.book-list').classList.remove('d-none');
+  document.querySelector('.book-inputs').classList.add('d-none');
+  document.querySelector('.contact').classList.add('d-none');
+});
+
+document.getElementById('contact').addEventListener('click', () => {
+  document.querySelector('.heading').innerHTML = 'Contact';
+  document.querySelector('.contact').classList.remove('d-none');
+  document.querySelector('.book-inputs').classList.add('d-none');
+  document.querySelector('.book-list').classList.add('d-none');
+});

@@ -2,6 +2,47 @@ body {
   margin: 0;
 }
 
+* a {
+  text-decoration: none;
+  color: #444;
+}
+
+a:active {
+  color: #b49cec;
+}
+
+.heading-nav {
+  margin-left: 50px;
+}
+
+.nav-bar {
+  background-color: aliceblue;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: auto;
+  align-items: center;
+  border: solid 1px #444;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  margin-right: 12px;
+}
+
+.nav-list li {
+  margin-left: 50px;
+  padding: 0 20px;
+}
+
+.mid {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 .container {
   width: 90%;
   max-width: 960px;
@@ -106,4 +147,15 @@ input[type=text]:focus {
   box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
   outline: none;
   transition: 100ms;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.d-none {
+  display: none;
 }
