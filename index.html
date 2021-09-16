@@ -4,18 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Awesome Books</title>
 </head>
 <body>
+  <nav class="nav-bar d-flex">
+    <h2 class="heading-nav"><img class="logo" src="./awesomebooks.png" alt="awesomebooks"></h2>
+    <ul class="nav-list d-flex">
+      <li><a class="current" id="list" href="#">List</a> </li>
+      <li class="mid"><a id="add-new-book" href="#">Add new</a> </li>
+      <li><a href="#" id="contact">Contact</a> </li>
+    </ul>
+  </nav>
+  <span class="now"></span>
   <div class="container">
-  <h1 class="heading">Awesome Books</h1>
+  <h1 class="heading">All Awesome Books</h1>
+  <div class="contact d-none">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, expedita aperiam. Eligendi quas sequi quod officia quia numquam dignissimos, sit, maxime hic, ut at cupiditate totam minus ab id mollitia!</p>
+    <ul class="contact-list">
+      <li>Our e-mail mail@mail.com</li>
+      <li>Our phone number:004358653442</li>
+      <li>Our adress Streetname 22, 84503 city, country</li>
+    </ul>
+  </div>
+  <div class="book-list">
   <div class="added2">
     <ul class="list"></ul>
   </div>
-  <div class="book-inputs">
+</div>
+  <div class="book-inputs d-none">
     <hr class="line">
-    <h2 class="heading">Add a new book</h2>
     <form action="#" id="formm" name="form" onsubmit="return formValidate()">
       <input  type="text" class="title box" name="title" placeholder="Title" required>
       <input  type="text" class="author box" name="author" placeholder="Author" required>
@@ -24,5 +43,8 @@
   </div>
 </div>
   <script src="main.js"></script>
+  <footer>Copyright</footer>
 </body>
+
+
 </html>

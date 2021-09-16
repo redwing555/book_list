@@ -1,5 +1,68 @@
+
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* a {
+  text-decoration: none;
+  color: #444;
+}
+
+a:active {
+  color: #b49cec;
+}
+
+.heading-nav {
+  margin-left: 50px;
+}
+
+.nav-bar {
+  background-color: aliceblue;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 72px;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+}
+
+.list > li a {
+  padding: 0.2rem;
+}
+
+.nav-bar ul li a {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.now {
+  display: block;
+  text-align: right;
+  position: relative;
+  top: 0.5rem;
+  left: -4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  margin-right: 12px;
+}
+
+.nav-list li {
+  margin-left: 50px;
+  padding: 0 20px;
+}
+
+.mid {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .container {
@@ -12,6 +75,7 @@ body {
   padding: 0 0 20px;
   overflow: hidden;
   border: 1px solid lightgray;
+  margin-top: 5rem;
 }
 
 .heading {
@@ -44,10 +108,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   color: white;
-}
-
-.list > li a {
-  padding: 0.2rem;
 }
 
 a .remove:hover {
@@ -106,4 +166,44 @@ input[type=text]:focus {
   box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
   outline: none;
   transition: 100ms;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.d-none {
+  display: none;
+}
+
+footer {
+  font-family: 'Circular-Loom', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 2%;
+  top: 30rem;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+
+.contact-list li {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
