@@ -1,5 +1,9 @@
+
+
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 * a {
@@ -16,12 +20,30 @@ a:active {
 }
 
 .nav-bar {
+  
   background-color: aliceblue;
   justify-content: space-between;
   border-radius: 5px;
-  height: auto;
+  height: 72px;
   align-items: center;
-  border: solid 1px #444;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.nav-bar ul li a{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.now {
+  display: block;
+  text-align: right;
+  position: relative;
+  top: 0.5rem;
+  left: -4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  
 }
 
 .d-flex {
@@ -53,6 +75,7 @@ a:active {
   padding: 0 0 20px;
   overflow: hidden;
   border: 1px solid lightgray;
+  margin-top: 5rem;
 }
 
 .heading {
@@ -158,4 +181,36 @@ input[type=text]:focus {
 
 .d-none {
   display: none;
+}
+
+
+footer{
+  font-family: 'Circular-Loom';
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0rem;
+  text-align: center;
+  padding: 2%;
+  top: 30rem;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.contact-list{
+  list-style: none;
+}
+
+.contact p {
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+
+}
+
+.contact-list li{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+    font-size: 1.5rem;
 }

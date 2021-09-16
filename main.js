@@ -100,11 +100,10 @@ const bookList = new BookList();
 let i = 0;
 const store = JSON.parse(localStorage.getItem('Collection'));
 /* eslint-disable */
-if (store !== null) {
-  i = 0;
-} else {
-  
+if (store !== null && store.length !== 0) {
   i = Object.values(store[store.length - 1])[0];
+} else {
+  i = 0;
 }
 /* eslint-enable */
 const form = document.getElementById('formm');
@@ -127,11 +126,25 @@ bookList.list.addEventListener('click', (ev) => {
 bookList.display();
 bookList.changeColor();
 
+window.addEventListener('load', function time(){
+
+  let {DateTime} =luxon;
+  let now = DateTime.now();
+  document.querySelector('.now').textContent = now.toLocaleString(DateTime.DATETIME_MED);
+  
+
+} );
+
+
 document.getElementById('add-new-book').addEventListener('click', () => {
   document.querySelector('.heading').innerHTML = 'Add a new book';
   document.querySelector('.book-inputs').classList.remove('d-none');
   document.querySelector('.contact').classList.add('d-none');
   document.querySelector('.book-list').classList.add('d-none');
+  document.getElementById('add-new-book').style.color = 'red';
+  document.getElementById('contact').style.color = 'black';
+  document.getElementById('list').style.color = 'black';
+  
 });
 
 document.getElementById('list').addEventListener('click', () => {
@@ -139,6 +152,10 @@ document.getElementById('list').addEventListener('click', () => {
   document.querySelector('.book-list').classList.remove('d-none');
   document.querySelector('.book-inputs').classList.add('d-none');
   document.querySelector('.contact').classList.add('d-none');
+  document.getElementById('list').style.color = 'red';
+  document.getElementById('add-new-book').style.color = 'black';
+  document.getElementById('contact').style.color = 'black';
+
 });
 
 document.getElementById('contact').addEventListener('click', () => {
@@ -146,4 +163,8 @@ document.getElementById('contact').addEventListener('click', () => {
   document.querySelector('.contact').classList.remove('d-none');
   document.querySelector('.book-inputs').classList.add('d-none');
   document.querySelector('.book-list').classList.add('d-none');
+  document.getElementById('contact').style.color = 'red';
+  document.getElementById('list').style.color = 'black';
+  document.getElementById('add-new-book').style.color = 'black';
+
 });
