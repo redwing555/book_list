@@ -1,3 +1,48 @@
 body {
   margin: 0;
 }
+
+.container {
+  width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 0 0 20px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.list {
+  border: 1px solid #7d53de;
+  padding: 20px;
+  margin: 10px;
+}
+
+.list li {
+list-style: none;
+width: 90%;
+font-size: 25px;
+display: flex;
+justify-content: space-between;
+background-color: #F6F7F8;
+padding: 15px;
+border-radius: 4px;
+}
+
+button {
+  float: right;
+    background: #7d53de;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
